@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Azurite
 
-## Getting Started
+<div align="center">
+  <h3>A beautiful, local-first markdown memo application.</h3>
+  <p>Built with Next.js, Electron, and Shadcn UI.</p>
+</div>
 
-First, run the development server:
+## ✨ Features
 
+- **Local First**: All data is stored locally on your machine. No internet required.
+- **Markdown Support**: Rich text editing with full Markdown support.
+- **Organization**: Nested categories/channels and tag management to keep your notes organized.
+- **Media Friendly**:
+  - Drag & drop file attachments
+  - Auto-expanding YouTube, Twitter (X), and Open Graph link previews
+- **Modern UI**:
+  - Clean, distraction-free interface
+  - Light / Dark / Extra Dark themes
+  - Smooth animations powered by Framer Motion & Tailwind Animate
+- **Fast Search**: Instantly find memos by content, tags, or category.
+
+## 🛠️ Technology Stack
+
+- **Framework**: Next.js 16 (App Router)
+- **Desktop Runtime**: Electron
+- **Styling**: Tailwind CSS v4
+- **UI Components**: Shadcn UI (Radix UI)
+- **Icons**: Lucide React
+- **Data Storage**: Local JSON File System
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (Latest LTS recommended)
+- npm / yarn / pnpm
+
+### Installation
+
+1. Clone the repository
+   ```bash
+   git clone https://github.com/CubeZeero/Azurite.git
+   cd Azurite
+   ```
+
+2. Install dependencies
+   ```bash
+   npm install
+   ```
+
+### Development
+
+**Run in Web Mode (Browser):**
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Run in Desktop Mode (Electron):**
+```bash
+npm run electron:dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a production build for your OS:
+```bash
+npm run electron:build
+```
 
-## Learn More
+The output application will be in the `dist` directory.
 
-To learn more about Next.js, take a look at the following resources:
+## 📂 Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `src/app`: Main application routes and layout
+- `src/components`: React UI components
+- `src/lib`: Utility functions and services
+  - `services/`: Core logic for file system operations (User, Category, Memo)
+- `electron`: Electron main process configuration
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📄 License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
