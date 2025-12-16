@@ -1,0 +1,7 @@
+{
+    "name": "azurite",
+    "version": "0.1.0",
+    "main": "main.js",
+    "author": "Azurite",
+    "description": "Discord-like Note Application"
+}
